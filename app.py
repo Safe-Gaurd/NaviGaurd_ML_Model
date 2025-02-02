@@ -12,6 +12,9 @@ group_model = model_data['group_model']
 scaler = model_data['scaler']
 label_encoder = model_data['label_encoder']  # Label encoder for decoding group
 
+@app.route("/")
+def home():
+    return "Welcome to my model!"
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
